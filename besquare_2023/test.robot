@@ -21,8 +21,9 @@ ${twitter}    //a[@href="https://twitter.com/derivdotcom/"]
 ${instagram}    //a[@href="https://www.instagram.com/deriv_official/"]
 ${linkedin}    //a[@href="https://www.linkedin.com/company/derivdotcom/"]
 ${swap_calculator}    https://deriv.com/trader-tools/swap-calculator/
-${calculator_table}    //form[@action="#"]
 ${symbol}    //ul[@id="symbol"]
+${calculator_table}    //form[@action="#"]
+
 
 # Trade types
 ${CFDs}    //h2[text()= "CFDs"]
