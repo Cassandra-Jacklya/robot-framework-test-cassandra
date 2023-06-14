@@ -94,7 +94,7 @@ Check If Deal Fee And Stake Correlates
         ${value_deal_fee_up_convert}=    Convert To Number    ${value_deal_fee_up}
         ${current_fee_convert}=    Convert To Number    ${current_fee}
         IF    (${value_deal_fee_down_convert} > ${current_fee_convert} and ${value_deal_fee_up_convert} > ${current_fee_convert})
-            ${current_fee}=    ${value_deal_fee_up}
+            ${current_fee}=    Set Variable    ${value_deal_fee_up}
         ELSE   
             Fail
         END   
@@ -107,7 +107,6 @@ Get Deal Fee Multiplier
     ${split_more}=    Set Variable    ${list[2]}
     @{actual_value}=    Split String    ${split_more}    ${\n}
     ${value}=    Set Variable    ${actual_value[1]}
-    Log To Console    ${value}
     RETURN    ${value}
 
 Buy Contract
